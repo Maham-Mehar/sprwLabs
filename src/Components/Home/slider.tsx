@@ -1,36 +1,35 @@
 'use client';
+
 import { useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
 import { HomeSlider_Data } from '@/Data/homeSlider';
 
-// Define the shape of your data
-// baseSlider.ts
-
-export type baseSlider_data = {
+// ✅ Move this above usage
+type SliderItem = {
   image: string;
-  alt?: string; // <-- Add this line
+  alt?: string; // alt is optional
 };
 
 const Slider: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const sliderData: SliderItem[] = HomeSlider_Data;
 
-  const openLightbox = (idx: number): void => {
+  const openLightbox = (idx: number) => {
     setCurrentIndex(idx);
     setIsOpen(true);
   };
 
-  const closeLightbox = (): void => setIsOpen(false);
+  const closeLightbox = () => setIsOpen(false);
 
-  const showPrev = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const showPrev = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setCurrentIndex((prevIndex) => (prevIndex + sliderData.length - 1) % sliderData.length);
   };
 
-  const showNext = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const showNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
   };
@@ -57,7 +56,6 @@ const Slider: React.FC = () => {
           className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
           onClick={closeLightbox}
         >
-          {/* Close Button */}
           <button
             className="absolute top-4 right-4 text-white text-3xl p-2"
             onClick={(e) => {
@@ -68,7 +66,6 @@ const Slider: React.FC = () => {
             <IoMdClose />
           </button>
 
-          {/* Previous Arrow */}
           <button
             className="absolute left-4 text-white text-4xl p-2"
             onClick={showPrev}
@@ -76,7 +73,6 @@ const Slider: React.FC = () => {
             <MdOutlineKeyboardArrowLeft size={40} />
           </button>
 
-          {/* Image View */}
           <img
             src={sliderData[currentIndex].image}
             alt={sliderData[currentIndex].alt ?? `Slide ${currentIndex + 1}`}
@@ -84,7 +80,6 @@ const Slider: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
           />
 
-          {/* Next Arrow */}
           <button
             className="absolute right-4 text-white text-4xl p-2"
             onClick={showNext}
@@ -92,7 +87,6 @@ const Slider: React.FC = () => {
             <MdOutlineKeyboardArrowRight size={40} />
           </button>
 
-          {/* Counter */}
           <div className="absolute bottom-4 right-4 text-white text-sm">
             {currentIndex + 1} / {sliderData.length}
           </div>
