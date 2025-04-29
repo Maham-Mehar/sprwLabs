@@ -83,7 +83,7 @@ const Contact_Form = () => {
 
                     {/* Right Side */}
                     <div className="relative bg-[url('/images/image26.png')] bg-cover bg-center overflow-hidden">
-                        <div className="bg-[#255179]/90 w-full h-[70rem] p-14 flex flex-col justify-center">
+                        <div className="bg-[#255179]/90 w-full h-[52rem] p-14 flex flex-col justify-center">
                             <p className="text-2xl font-semibold text-center mb-4 text-white">Schedule Time</p>
                             <SelectDate />
                         </div>

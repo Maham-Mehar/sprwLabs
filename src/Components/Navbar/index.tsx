@@ -85,7 +85,7 @@ const Navbar = () => {
                                     <Link
                                         key={href}
                                         href={href}
-                                        className="px-3 py-2 text-[13px] text-right text-[#CCCED6] hover:text-white hover:bg-[#1A1A1A] block"
+                                        className="px-3 py-2 text-[13px]  text-[#CCCED6] hover:text-white hover:bg-[#1A1A1A] block"
                                     >
                                         {label}
                                     </Link>
