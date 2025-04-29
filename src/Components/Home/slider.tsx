@@ -5,9 +5,11 @@ import { IoMdClose } from 'react-icons/io';
 import { HomeSlider_Data } from '@/Data/homeSlider';
 
 // Define the shape of your data
-type SliderItem = {
+// baseSlider.ts
+
+export type baseSlider_data = {
   image: string;
-  alt?: string;
+  alt?: string; // <-- Add this line
 };
 
 const Slider: React.FC = () => {
