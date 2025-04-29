@@ -1,27 +1,38 @@
 'use client';
-
 import { useState } from 'react';
-import { baseSlider_Data } from '@/Data/baseSlider';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
+import { HomeSlider_Data } from '@/Data/homeSlider';
 
-const Base_Slider: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Define the shape of your data
+// baseSlider.ts
 
-  const openLightbox = (idx: number) => {
+export type baseSlider_data = {
+  image: string;
+  alt?: string; // <-- Add this line
+};
+
+const Slider: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const sliderData: SliderItem[] = HomeSlider_Data;
+
+  const openLightbox = (idx: number): void => {
     setCurrentIndex(idx);
     setIsOpen(true);
   };
-  const closeLightbox = () => setIsOpen(false);
 
-  const showPrev = (e: React.MouseEvent) => {
+  const closeLightbox = (): void => setIsOpen(false);
+
+  const showPrev = (e: React.MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
-    setCurrentIndex((currentIndex + baseSlider_Data.length - 1) % baseSlider_Data.length);
+    setCurrentIndex((prevIndex) => (prevIndex + sliderData.length - 1) % sliderData.length);
   };
-  const showNext = (e: React.MouseEvent) => {
+
+  const showNext = (e: React.MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
-    setCurrentIndex((currentIndex + 1) % baseSlider_Data.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
   };
 
   return (
