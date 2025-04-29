@@ -5,11 +5,11 @@ export interface slider_data {
 export const HomeSlider_Data: slider_data[] = [
     {
         id:1 ,
-        image: "/images/image2.png",
+        image: "/images/Image2.png",
     },
     {
         id:2 ,
-        image: "/images/image3.png",
+        image: "/images/Image3.png",
     },
     {
         id:3 ,

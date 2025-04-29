@@ -1,14 +1,11 @@
 'use client';
-
 import { useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { IoMdClose } from 'react-icons/io';
 import { HomeSlider_Data } from '@/Data/homeSlider';
-
-// ✅ Move this above usage
 type SliderItem = {
   image: string;
-  alt?: string; // alt is optional
+  alt?: string; 
 };
 
 const Slider: React.FC = () => {
@@ -39,14 +36,14 @@ const Slider: React.FC = () => {
       <div className="p-5 md:p-10">
         <div className="grid grid-cols-3 gap-2">
           {sliderData.map((item, idx) => (
-            <div key={idx} className="cursor-pointer">
-              <img
-                src={item.image}
-                alt={item.alt ?? `Slide ${idx + 1}`}
-                className="w-full h-auto object-cover"
-                onClick={() => openLightbox(idx)}
-              />
-            </div>
+     <div key={idx} className="cursor-pointer">
+     <img
+       src={item.image}
+       alt={item.alt ?? `Slide ${idx + 1}`}
+       className="w-full h-auto object-cover"
+       onClick={() => openLightbox(idx)}
+     />
+   </div>
           ))}
         </div>
       </div>
