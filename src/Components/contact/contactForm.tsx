@@ -33,7 +33,7 @@ const Contact_Form = () => {
 
                     {/* Left Side */}
                     <div className="bg-white w-full p-6 sm:p-9 mt-19">
-                        <div className="ms-7 max-w-sm">
+                        <div className="md:ms-7 ms-0 max-w-sm">
                             <p className="text-[#235380] text-4xl font-semibold">Let's connect!</p>
                             <p className="text-base font-normal mt-10 text-[#666C77]">
                                 Question regarding automation? Send us an email and we'll add you to our Slack for a quick answer.
