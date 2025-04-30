@@ -28,11 +28,11 @@ const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =
             <div
                 className={`fixed inset-y-0 right-0 bg-white w-[264px] shadow-lg z-30 transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
                 onClick={(e) => e.stopPropagation()}
-            >  <button onClick={onClose} className="absolute right-0 pt-2 pr-3 text-4xl text-gray-700 hover:text-red-500">
+            > 
+                <div className="relative p-4 font-oswald">
+                <button onClick={onClose} className="absolute right-0  pr-3 text-4xl text-gray-700 hover:text-red-500">
                     &times;
                 </button>
-                <div className="relative p-4 font-oswald">
-
 
                     <Link href="/" className="font-quattrocento text-2xl mt-20 font-bold text-[#235380]">
                         SprwLabs
