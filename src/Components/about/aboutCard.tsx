@@ -3,7 +3,7 @@ import { AboutCard_Data } from "@/Data/aboutCard";
 const About_Card = () => {
     return (
         <div className="bg-[#F7F8FA] py-33">
-            <div className="max-w-5xl mx-auto xl:px-20 lg:px-20 md:px-14 sm:px-10 px-5">
+            <div className="max-w-5xl mx-auto xl:px-20 lg:px-20 md:px-14 sm:px-10 px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-15 lg:gap-12 md:gap-8">
                     {AboutCard_Data.map((item, index) => (
                         <div key={index} >

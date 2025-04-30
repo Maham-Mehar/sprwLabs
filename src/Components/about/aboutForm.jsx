@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 const About_Form = () => {
     return (
         <div className="bg-[#235380] xl:py-15 py-10 ">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 shadow-xl">
                 {/* Left Side */}
                 <div className=" bg-white shadow-lg py-6 sm:py-8 md:py-10 lg:py-12 xl:py-14 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-14 ">

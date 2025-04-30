@@ -8,7 +8,7 @@ const ProfessionalInfo = () => {
                 <div className="px-2 py-6">
                     <div className="ps-0 xl:ps-9">
                         <p className="text-lg font-semibold text-[#7AB4D1]">{Info_Data[0].titleText}</p>
-                        <p className="text-[30px] sm:text-[34px] md:text-[38px] xl:text-[42px] font-semibold text-[#235380]">
+                        <p className="text-[28px] sm:text-[34px] md:text-[38px] xl:text-[42px] font-semibold text-[#235380]">
                             {Info_Data[0].titleHeading}
                         </p>
                     </div>
@@ -24,7 +24,7 @@ const ProfessionalInfo = () => {
                                 {/* Content Column (Heading and Explanation) */}
                                 {item.Heading && item.explanation && (
                                     <div className="flex flex-col justify-start mb-4">
-                                        <p className="text-lg font-semibold text-dark max-w-md mb-2">{item.Heading}</p>
+                                        <p className="text-xl font-semibold text-dark max-w-md mb-2">{item.Heading}</p>
                                         {item.explanation?.map((explanationItem, idx) => (
                                             <p key={idx} className="text-sm font-normal pb-4 text-[#646C77]">
                                                 {explanationItem.data}
