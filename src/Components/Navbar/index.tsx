@@ -28,17 +28,19 @@ const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =
             <div
                 className={`fixed inset-y-0 right-0 bg-white w-[264px] shadow-lg z-30 transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
                 onClick={(e) => e.stopPropagation()}
-            > 
+            >
                 <div className="relative p-4 font-oswald">
-                <button onClick={onClose} className="absolute right-0  pr-3 text-4xl text-gray-700 hover:text-red-500">
-                    &times;
-                </button>
+                    {/* Header: SprwLabs and Close Button */}
+                    <div className="flex items-center justify-between mb-6">
+                        <Link href="/" className="font-quattrocento text-2xl pt-1 font-bold text-[#235380]">
+                            SprwLabs
+                        </Link>
+                        <button onClick={onClose} className="text-5xl text-gray-700 hover:text-red-500">
+                            &times;
+                        </button>
+                    </div>
 
-                    <Link href="/" className="font-quattrocento text-2xl mt-20 font-bold text-[#235380]">
-                        SprwLabs
-                    </Link>
-
-                    <ul className="text-lg pt-6 text-black font-medium space-y-4">
+                    <ul className="text-lg pt-2 text-black font-medium space-y-4">
                         {navItems.slice(0, 3).map(({ label, href }) => (
                             <li key={href}>
                                 <Link href={href}>{label}</Link>
