@@ -24,7 +24,7 @@ const ProfessionalInfo = () => {
                                 {/* Content Column (Heading and Explanation) */}
                                 {item.Heading && item.explanation && (
                                     <div className="flex flex-col justify-start mb-4">
-                                        <p className="text-lg font-semibold max-w-md mb-2">{item.Heading}</p>
+                                        <p className="text-lg font-semibold text-dark max-w-md mb-2">{item.Heading}</p>
                                         {item.explanation?.map((explanationItem, idx) => (
                                             <p key={idx} className="text-sm font-normal pb-4 text-[#646C77]">
                                                 {explanationItem.data}
