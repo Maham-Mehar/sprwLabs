@@ -12,7 +12,7 @@ const Idea_BasedInfo= () => {
                 <p className="text-sm max-w-[26rem] font-normal leading-[1.4rem] text-[#B3C5D9] mt-7 ">
                     As organizations look to mature their security practices, we're here with ideas, suggestions, experience and templates to build upon.  In our view, SOAR is a process automation tool.  We take the idea or template listed below and extrapolate that to your environment, your process and your team.  There is no such thing as out of the box playbooks.  They do not exist.  Every playbook, regardless of vendor, requires custom code and custom integrations to meet your needs.  Check out the ideas below and let's connect and discuss how we can help!
                 </p>
-                <button className="mt-13 bg-[#6596C4]/40 border-2 rounded-full text-white px-10 py-2.5  hover:bg-[#D8E1E9] hover:text-[#255179]">
+                <button className="mt-20 bg-[#6596C4]/40 border-2 rounded-full text-white px-7 sm:px-13 py-2.5 hover:bg-[#D8E1E9] hover:text-[#255179] active:bg-[#D8E1E9] active:text-[#255179] focus:bg-[#D8E1E9] focus:text-[#255179]">
                     Primary Action
                 </button>
             </div>
