@@ -8,15 +8,15 @@ const Features = () => {
         {featureData.map((item, index) => (
           <div
             key={index}
-            className={` ps-4 py-6  ${
+            className={` ps-4 py-3 sm:py-6  ${
               index === 0 ? "md:col-span-2" : ""
             }`}
           >
             {/* First Item: Full Width Title */}
             {index === 0 ? (
               <>
-                <p className="text-lg font-semibold text-[#7AB4D1]">{item.titleText}</p>
-                <p className="text-[42px] font-semibold text-[#235380]">{item.titleHeading}</p>
+                <p className="text-md sm:text-lg font-semibold text-[#7AB4D1]">{item.titleText}</p>
+                <p className="md:text-[42px] sm:text-[38px] text-[33px] font-semibold text-[#235380]">{item.titleHeading}</p>
               </>
             ) : (
               <>
