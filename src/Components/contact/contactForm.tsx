@@ -31,7 +31,7 @@ const Contact_Form = () => {
             <div className="max-w-6xl mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 shadow-[0_35px_60px_-25px_rgba(0,0,0,0.4)] md:grid-cols-2 gap-6">
 
-                    {/* Left Side */}
+                    {/* Left Sisde */}
                     <div className="bg-white w-full p-6 sm:p-9 mt-19">
                         <div className="md:ms-7 ms-0 max-w-sm">
                             <p className="text-[#235380] text-4xl font-semibold">Let's connect!</p>
