@@ -2,7 +2,7 @@ import { toolsData } from "@/Data/tool";
 const Tools = () => {
   return (
     <div className="container">
-      <div className="xl:px-25 lg:px-25 md:px-14 sm:px-12 px-10 py-32 max-w-5xl mx-auto">
+      <div className="xl:px-25 lg:px-25 md:px-13 sm:px-10 px-8 py-16 xl:py-32 lg:py-27 md:py-23 sm:py-19 max-w-5xl mx-auto">
         {toolsData.map((item, index) => (
           <div key={index} className=" max-w-[700px]">
             <p className="text-lg font-semibold text-[#1898D8]">{item.text1}</p>

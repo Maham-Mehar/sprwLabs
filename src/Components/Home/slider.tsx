@@ -33,7 +33,7 @@ const Slider: React.FC = () => {
 
   return (
     <>
-      <div className="p-5 md:p-10">
+      <div className="px-5 md:px-10 pb-24 md:pb-30">
         <div className="grid grid-cols-3 gap-2">
           {sliderData.map((item, idx) => (
      <div key={idx} className="cursor-pointer">
