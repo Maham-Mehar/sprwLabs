@@ -28,29 +28,44 @@ const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =
             <div
                 className={`fixed inset-y-0 right-0 bg-white w-[264px] shadow-lg z-30 transform transition-transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}
                 onClick={(e) => e.stopPropagation()}
-            >
-                <div className="relative p-4">
-                    <button onClick={onClose} className="absolute right-0 top-6 pr-2 text-3xl text-gray-700 hover:text-red-500">&times;</button>
-                    <Link href="/" className="font-quattrocento text-2xl font-bold text-[#235380]">SprwLabs</Link>
-                    <ul className="text-sm pt-6 text-black font-medium space-y-4">
+            >  <button onClick={onClose} className="absolute right-0 pt-2 pr-3 text-4xl text-gray-700 hover:text-red-500">
+                    &times;
+                </button>
+                <div className="relative p-4 font-oswald">
+
+
+                    <Link href="/" className="font-quattrocento text-2xl mt-20 font-bold text-[#235380]">
+                        SprwLabs
+                    </Link>
+
+                    <ul className="text-lg pt-6 text-black font-medium space-y-4">
                         {navItems.slice(0, 3).map(({ label, href }) => (
-                            <li key={href}><Link href={href}>{label}</Link></li>
+                            <li key={href}>
+                                <Link href={href}>{label}</Link>
+                            </li>
                         ))}
-                        <li onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                            <div className="flex items-center cursor-pointer">
-                                <span>Services</span><RiArrowDropDownLine size={30} />
-                            </div>
-                            {isHovered && <div className="absolute left-0 mt-1 w-40 bg-black rounded-md shadow-md z-50">
-                                {services.map(({ label, href }) => (
-                                    <Link key={href} href={href} className="px-3 py-2 text-[13px] text-[#CCCED6] hover:text-white hover:bg-[#1A1A1A] block">{label}</Link>
-                                ))}
-                            </div>}
-                        </li>
+
+                        {/* Services label */}
+                        <li className="text-[#1A1A1A] text-base font-medium">Services</li>
+
+                        {/* Services links */}
+                        {services.map(({ label, href }) => (
+                            <li key={href} className="pl-3">
+                                <Link href={href} className="text-sm font-medium hover:text-[#255179]">
+                                    {label}
+                                </Link>
+                            </li>
+                        ))}
+
                         {navItems.slice(3).map(({ label, href }) => (
-                            <li key={href}><Link href={href}>{label}</Link></li>
+                            <li key={href}>
+                                <Link href={href}>{label}</Link>
+                            </li>
                         ))}
                     </ul>
                 </div>
+
+
             </div>
         </>
     );

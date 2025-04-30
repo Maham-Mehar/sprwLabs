@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 
 const SelectDate = () => {
   return (
-    <div className="App flex justify-center">
+    <div className="App px-6 sm:px-4">
       <InlineWidget url="https://calendly.com/magentodeveloper1993" />
     </div>
   );
