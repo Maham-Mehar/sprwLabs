@@ -26,7 +26,7 @@ const Professional_Card = () => {
                             </div>
                         )}
                         {item.Heading && (
-                            <p className="text-4xl font-semibold mb-4 mt-3">{item.Heading}</p>
+                            <p className="text-4xl font-semibold text-dark mb-4 mt-3">{item.Heading}</p>
                         )}
                     </div>
                 ))}
